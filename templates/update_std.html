@@ -14,7 +14,7 @@
             <div class="col-md-12">
                 <div class='card bg-info'>
                     <div class='class-body'>
-                        <form action="{% url 'do_update' student.Roll %}" method="POST" style='padding:5px 10px 5px 10px'>
+                        <form action="{% url 'do_update' student.id %}" method="POST" style='padding:5px 10px 5px 10px'>
                             {% csrf_token %}
                             <div class='md-3'>
                                 <label for='roll'>Roll No : </label>
