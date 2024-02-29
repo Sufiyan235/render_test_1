@@ -18,22 +18,22 @@ def add_std(request):
     return render(request,'add_std.html')
 
 
-def delete_std(request,roll):
-    std = Student.objects.get(Roll=roll)
+def delete_std(request,id):
+    std = Student.objects.get(id=id)
     std.delete()
 
     return redirect("home")
 
 
-def update_std(request,roll):
-    student = Student.objects.get(Roll=roll)
+def update_std(request,id):
+    student = Student.objects.get(id=id)
     context={
         'student':student
     }
     return render(request,'update_std.html',context)
 
 
-def do_update(request,roll):
+def do_update(request,id):
 
     new_name = request.POST['name']
     new_roll = request.POST['roll']
@@ -41,7 +41,7 @@ def do_update(request,roll):
     new_address = request.POST['address']
     new_phone = request.POST['phone']
 
-    std = Student.objects.get(Roll=roll)
+    std = Student.objects.get(id=id)
 
     std.Name=new_name
     std.Roll=new_roll

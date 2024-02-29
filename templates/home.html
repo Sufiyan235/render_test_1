@@ -35,8 +35,8 @@
                                 <td>{{student.Address}}</td>
                                 <td>{{student.Phone}}</td>
                                 <td>
-                                <a href="{% url 'delete_std' student.Roll %}" class='btn btn-danger md-sm'>Delete</a>
-                                <a href="{% url 'update_std' student.Roll %}" class='btn btn-success md-sm'>Update</a>
+                                <a href="{% url 'delete_std' student.id %}" class='btn btn-danger md-sm'>Delete</a>
+                                <a href="{% url 'update_std' student.id %}" class='btn btn-success md-sm'>Update</a>
                                 </td>
                             </tr>
                             {% endfor %}
